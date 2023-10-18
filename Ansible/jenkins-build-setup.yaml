@@ -29,13 +29,13 @@
       name: docker.io 
       state: present
 
-  - name: start docker services 
-    service: 
-      name: docker 
-      state: started 
-  
-  # - name: give 777 permissions on /var/run/docker.sock
-  #   file: 
-  #     path: /var/run/docker.sock
-  #     state: file 
-  #     mode: 0777    
+  - name: start docker services
+    service:
+      name: docker
+      state: started
+
+  - name: give 777 permissions on /var/run/docker.sock
+    file:
+      path: /var/run/docker.sock
+      state: file
+      mode: 0777
